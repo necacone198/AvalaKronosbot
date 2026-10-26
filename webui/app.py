@@ -21,7 +21,7 @@ except ImportError:
     MODEL_AVAILABLE = False
     print("Warning: Kronos model cannot be imported, will use simulated data for demonstration")
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), "templates"))
 CORS(app)
 
 # Global variables to store models
